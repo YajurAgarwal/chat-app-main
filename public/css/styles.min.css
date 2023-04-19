@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+html {
+  height: 100%;
+  font-size: 16px;
+}
+input {
+  border-radius: 1rem;
+  font-size: 14px;
+}
+body {
+  height: 100%;
+  line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif;  
+}
+.bg-image {
+  /* The image used */
+  background-image: url("../img/images.jpg");
+  
+  /* Add the blur effect */
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+  
+  /* Full height */
+  height: 100%; 
+  
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 80%;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: white;
+}
+input {
+  border: 2px solid rgb(57, 255, 20);
+  padding: 12px;
+  outline: none;
+  background: white;
+  font-weight: bolder;
+  font-size: larger;
+  color: black;
+}
+button {
+  cursor: pointer;
+  padding: 12px;
+  background: #8b0000;
+  border: none;
+  color: white;
+  font-size: 20px;
+  transition: background 0.3s ease;
+}
+button:hover {
+  background: greenyellow;
+}
+button:disabled {
+  cursor: default;
+  background: #7c5cbf94;
+  color: none;
+}
+.centered-form {
+  font-size: larger;
+  color: oldlace;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.centered-form__box {
+  border: 0.5rem solid rgb(57, 255, 20);
+  border-radius: 1rem;
+  background: black;
+  padding: 30px;
+  width: 250px;
+}
+.centered-form button {
+  width: 100%;
+}
+.centered-form input {
+  margin-bottom: 16px;
+  width: 100%;
+}
+.chat {
+  display: flex;
+  /* flex-direction: column; */
+}
+.chat__sidebar {
+  height: 100vh;
+  color: white;
+  background: black;
+  width: 20rem;
+  overflow-y: scroll;
+}
+.chat__main {
+  background-color: #100000;
+  width: 60rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
+  /* margin-right: 225px; */
+}
+.chat__messages {
+  display: flex;
+  /* flex-wrap: wrap; */
+  flex-direction: column;
+  color: white;
+  font-weight: bolder;
+  font-family: "IBM Plex Mono", monospace;
+  font-family: "Oleo Script Swash Caps", cursive;
+  font-family: "Roboto Mono", monospace;
+  flex-grow: 1;
+  padding: 24px 24px 0;
+  overflow-y: scroll;
+  line-break: normal;
+}
+.message {
+  border-left: 0.6rem solid white;
+  padding: 1rem;
+  flex-direction: column;
+  margin-bottom: 16px;
+  color: white;
+  transition: all 150ms ease-in;
+}
+.message:hover{
+  transform: scaleX(0.98);
+}
+.message__name {
+  color: beige;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 8px;
+}
+.message__meta {
+  color: white;
+  font-size: 14px;
+}
+.message__text {
+  transition:font-size 150ms ease-out;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  width: 60rem;
+  flex-grow: 1;
+}
+.message__self {
+  display: flex;
+  flex-wrap: wrap;
+  float: inline-start;
+  flex-grow: 1;
+}
+.message a {
+  color: #0070cc;
+  text-decoration: none;
+}
+.compose {
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 16px;
+  padding: 15px;
+}
+.compose form {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 16px;
+}
+.compose input {
+  border: 0.2rem solid white;
+  font-weight: bold;
+  color: white;
+  background: none;
+  /* font-family: 'Times New Roman', Times, serif; */
+  width: 100%;
+  padding: 8px;
+  margin: 0 16px 0 0;
+  flex-grow: 1;
+}
+.compose button {
+  height: 5rem;
+  border: 0.2rem solid rgb(57, 255, 20);
+  box-shadow: 0px 0px 5px 5px rgb(57, 255, 20);
+  background: none;
+  margin: 2px;
+  border-radius: 1rem;
+  font-size: 14px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+
+.compose button:hover {
+  transform: scale(1.1);
+}
+
+.room-title {
+  /* border: 0.5rem solid rgb(57, 255, 20); */
+  box-shadow: inset 0px 0px 5px 5px rgb(57, 255, 20);
+  text-align: center;
+  font-weight: 400;
+  font-size: 22px;
+  color: white;
+  background: #231F20;
+  padding: 17px;
+  text-transform: uppercase;
+  transition: font-size 150ms linear;
+}
+
+.room-title:hover{
+  cursor: pointer;
+  font-size: 30px;
+}
+.list-title {
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+  padding: 12px 17px 0;
+  text-transform: uppercase;
+}
+.users {
+  color: white;
+  text-transform: uppercase;
+  list-style-type: none;
+  font-weight: 300;
+  padding: 12px 24px 0;
+}
